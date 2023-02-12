@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0A83BF7229960F1A0081A75F /* SetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF7129960F1A0081A75F /* SetApp.swift */; };
-		0A83BF7429960F1A0081A75F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF7329960F1A0081A75F /* ContentView.swift */; };
+		0A83BF7429960F1A0081A75F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF7329960F1A0081A75F /* TableView.swift */; };
 		0A83BF7629960F200081A75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A83BF7529960F200081A75F /* Assets.xcassets */; };
 		0A83BF7929960F200081A75F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A83BF7829960F200081A75F /* Preview Assets.xcassets */; };
+		0A83BF802996229A0081A75F /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF7F2996229A0081A75F /* SetModel.swift */; };
+		0A83BF82299622A90081A75F /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF81299622A90081A75F /* SetViewModel.swift */; };
+		0A83BF84299627810081A75F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF83299627810081A75F /* CardView.swift */; };
+		0A83BF882998B84E0081A75F /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83BF872998B84E0081A75F /* AspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A83BF6E29960F1A0081A75F /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A83BF7129960F1A0081A75F /* SetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApp.swift; sourceTree = "<group>"; };
-		0A83BF7329960F1A0081A75F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0A83BF7329960F1A0081A75F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		0A83BF7529960F200081A75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A83BF7829960F200081A75F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A83BF7F2996229A0081A75F /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
+		0A83BF81299622A90081A75F /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
+		0A83BF83299627810081A75F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0A83BF872998B84E0081A75F /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				0A83BF7129960F1A0081A75F /* SetApp.swift */,
-				0A83BF7329960F1A0081A75F /* ContentView.swift */,
+				0A83BF7329960F1A0081A75F /* TableView.swift */,
+				0A83BF83299627810081A75F /* CardView.swift */,
+				0A83BF7F2996229A0081A75F /* SetModel.swift */,
+				0A83BF81299622A90081A75F /* SetViewModel.swift */,
+				0A83BF872998B84E0081A75F /* AspectVGrid.swift */,
 				0A83BF7529960F200081A75F /* Assets.xcassets */,
 				0A83BF7729960F200081A75F /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A83BF7429960F1A0081A75F /* ContentView.swift in Sources */,
+				0A83BF7429960F1A0081A75F /* TableView.swift in Sources */,
+				0A83BF82299622A90081A75F /* SetViewModel.swift in Sources */,
+				0A83BF882998B84E0081A75F /* AspectVGrid.swift in Sources */,
+				0A83BF802996229A0081A75F /* SetModel.swift in Sources */,
 				0A83BF7229960F1A0081A75F /* SetApp.swift in Sources */,
+				0A83BF84299627810081A75F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
