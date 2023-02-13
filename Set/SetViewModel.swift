@@ -36,4 +36,8 @@ class SetViewModel: ObservableObject {
         model.toggleSelection(card: card)
         model.matchSelected()
     }
+    
+    func noMoreCardsInDeck() -> Bool {
+        model.noMoreCardsInDeck()
+    }
 }

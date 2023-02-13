@@ -16,10 +16,10 @@ struct CardView: View {
             ZStack{
                 rect.foregroundColor(.white)
                 if card.isSelected {
-                    rect.strokeBorder(lineWidth: 8).foregroundColor(.blue)
+                    rect.strokeBorder(lineWidth: 8).foregroundColor(.cyan)
                     
                 } else {
-                    rect.strokeBorder(lineWidth: 4).foregroundColor(.black)
+                    rect.strokeBorder(lineWidth: 3).foregroundColor(.gray)
                 }
                 
                 drawNumberOfShape
@@ -59,7 +59,7 @@ struct CardView: View {
         case .first:
             drawColor(drawShading(Ellipse()))
         case .second:
-            drawColor(drawShading(Circle()))
+            drawColor(drawShading(Diamond()))
         case .third:
             drawColor(drawShading(Rectangle()))
         }
@@ -70,11 +70,11 @@ struct CardView: View {
     where Drawing: View {
         switch card.content.color {
         case .first:
-            shape.foregroundColor(.red)
+            shape.foregroundColor(.pink)
         case .second:
-            shape.foregroundColor(.blue)
+            shape.foregroundColor(.indigo)
         case .third:
-            shape.foregroundColor(.purple)
+            shape.foregroundColor(.green)
         }
     }
     
@@ -83,11 +83,11 @@ struct CardView: View {
     where Drawing: Shape {
         switch card.content.shading {
         case .first:
-            shape.stroke()
+            shape.stroke(lineWidth: 4)
         case .second:
             shape.fill()
         case .third:
-            shape.fill().opacity(0.2)
+            shape.fill().opacity(0.3)
         }
     }
 }

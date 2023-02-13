@@ -11,7 +11,6 @@ struct SetModel {
     var cardsInDeck: [Card]
     var cardsOnTable: [Card]
     
-    
     init() {
         cardsInDeck = []
         cardsOnTable = []
@@ -31,6 +30,10 @@ struct SetModel {
 
     }
     
+    func noMoreCardsInDeck() -> Bool {
+        if cardsInDeck.count == 0 { return true }
+        return false
+    }
     
     mutating func threeCardsFromDeckToTable() {
         if cardsInDeck.count < 3 { return }
@@ -52,7 +55,7 @@ struct SetModel {
             if matched {
                 removeSelectedCards()
             } else {
-                undoSelection()
+                deselectCards()
             }
         }
     }
@@ -64,7 +67,7 @@ struct SetModel {
             }
         }
     }
-    mutating func undoSelection() {
+    mutating func deselectCards() {
         for card in selectedCards {
             if let indexToUndo = cardsOnTable.firstIndex(where: { $0.id == card.id }) {
                 cardsOnTable[indexToUndo].isSelected = false

@@ -14,31 +14,24 @@ struct TableView: View {
         VStack{
             AspectVGrid(items: game.cardsOnTable, aspectRatio: 2/3) { card in
                 CardView(card: card)
+                    .padding(2)
                     .onTapGesture {
                         game.toggleSelection(card: card)
                     }
             }
             .padding()
             
-            
             Spacer()
 
-            Button {
-                game.threeCardsFromDeckToTable()
-            } label: {
-                Text("Add more Cards")
+            if !game.noMoreCardsInDeck() {
+                Button {
+                    game.threeCardsFromDeckToTable()
+                } label: {
+                    Text("Deal 3 More Cards")
+                }
             }
         }
-        
-        
-//        ScrollView {
-//            LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
-//                ForEach(game.model.deck) { item in
-//                    CardView(card: item).aspectRatio(2/3, contentMode: .fit)
-//                }
-//            }
-//        }
-        
+
     }
     
     
