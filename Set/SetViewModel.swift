@@ -13,31 +13,40 @@ class SetViewModel: ObservableObject {
     
     
     var cardsInDeck: [Card] {
-        return model.cardsInDeck
+        return model.cards
     }
     
     var cardsOnTable: [Card] {
         return model.cardsOnTable
     }
-
     
+    var cardsInDiscardPile: [Card] {
+        return model.cardsInPile
+    }
     
+    func noMoreCardsInDeck() -> Bool {
+        model.cards.isEmpty
+    }
     
 //    MARK: - Intent(s)
-    func threeCardsFromDeckToTable() {
+    func threeCardsFromDeckToTable() -> [Int]? {
         model.threeCardsFromDeckToTable()
     }
     
-    func matchSelected() {
-        model.matchSelected()
+    func tryMatchingSelectedCards() {
+        model.tryMatchingSelectedCards()
     }
     
     func toggleSelection(card: Card) {
         model.toggleSelection(card: card)
-        model.matchSelected()
     }
     
-    func noMoreCardsInDeck() -> Bool {
-        model.noMoreCardsInDeck()
+    func cardStateToTable(id: Int) {
+        model.cardStateToTable(id: id)
     }
+    
+    func cardStateToPile(id: Int) {
+        model.cardStateToPile(id: id)
+    }
+    
 }
